@@ -9,7 +9,6 @@ const navItems = [
   { label: "Library", href: "/library"},
   { label: "Add New", href: "/documents/new"},
 ]
-
 const Navbar = () => {
   const pathName = usePathname();
   const { user } = useUser();
