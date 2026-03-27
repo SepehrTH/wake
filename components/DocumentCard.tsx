@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BookCardProps } from "@/types";
+import { DocumentCardProps } from "@/types";
 
-const BookCard = ({ title, author, coverURL, slug }: BookCardProps) => {
+const DocumentCard = ({ title, author, coverURL, slug }: DocumentCardProps) => {
   return (
-    <Link href={`/books/${slug}`} className="group book-card">
+    <Link href={`/documents/${slug}`} className="group book-card">
       <div className="book-card-3d book-card-3d-hover">
         <div className="book-card-spine" />
         <div className="book-card-cover-wrapper">
@@ -25,4 +25,4 @@ const BookCard = ({ title, author, coverURL, slug }: BookCardProps) => {
   );
 };
 
-export default BookCard;
+export default DocumentCard;

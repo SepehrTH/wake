@@ -9,7 +9,7 @@ import { UploadSchema } from '@/lib/zod';
 // DATABASE MODELS
 // ============================================
 
-export interface IBook extends Document {
+export interface IDocument extends Document {
     _id: string;
     clerkId: string;
     title: string;
@@ -26,9 +26,9 @@ export interface IBook extends Document {
     updatedAt: Date;
 }
 
-export interface IBookSegment extends Document {
+export interface IDocumentSegment extends Document {
     clerkId: string;
-    bookId: Types.ObjectId;
+    documentId: Types.ObjectId;
     content: string;
     segmentIndex: number;
     pageNumber?: number;
@@ -40,7 +40,7 @@ export interface IBookSegment extends Document {
 export interface IVoiceSession extends Document {
     _id: string;
     clerkId: string;
-    bookId: Types.ObjectId;
+    documentId: Types.ObjectId;
     startedAt: Date;
     endedAt?: Date;
     durationSeconds: number;
@@ -53,9 +53,9 @@ export interface IVoiceSession extends Document {
 // FORM & INPUT TYPES
 // ============================================
 
-export type BookUploadFormValues = z.infer<typeof UploadSchema>;
+export type DocumentUploadFormValues = z.infer<typeof UploadSchema>;
 
-export interface CreateBook {
+export interface CreateDocument {
     clerkId: string;
     title: string;
     author: string;
@@ -74,7 +74,7 @@ export interface TextSegment {
     wordCount: number;
 }
 
-export interface BookCardProps {
+export interface DocumentCardProps {
     title: string;
     author: string;
     coverURL: string;

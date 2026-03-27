@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Plus } from "lucide-react";
-import { sampleBooks } from "@/lib/constants";
-import BookCard from "@/components/BookCard";
+import { sampleDocuments } from "@/lib/constants";
+import DocumentCard from "@/components/DocumentCard";
 
 const LibraryPage = () => {
   return (
@@ -11,23 +11,23 @@ const LibraryPage = () => {
           <div>
             <h1 className="library-title">Your Library</h1>
             <p className="library-description">
-              Your personal collection of books, ready to talk to.
+              Your personal collection of documents, ready to talk to.
             </p>
           </div>
-          <Link href="/books/new" className="library-add-btn">
+          <Link href="/documents/new" className="library-add-btn">
             <Plus className="w-5 h-5" />
-            Add a New Book
+            Add a New Document
           </Link>
         </div>
 
         <div className="library-grid">
-          {sampleBooks.map((book) => (
-            <BookCard
-              key={book._id}
-              title={book.title}
-              author={book.author}
-              coverURL={book.coverURL}
-              slug={book.slug}
+          {sampleDocuments.map((doc) => (
+            <DocumentCard
+              key={doc._id}
+              title={doc.title}
+              author={doc.author}
+              coverURL={doc.coverURL}
+              slug={doc.slug}
             />
           ))}
         </div>

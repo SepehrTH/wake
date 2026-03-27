@@ -8,7 +8,7 @@ import { UploadSchema } from '@/lib/zod';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import type { BookUploadFormValues } from '@/types';
+import type { DocumentUploadFormValues } from '@/types';
 
 const voices = {
   male: [
@@ -35,7 +35,7 @@ const UploadForm = () => {
     setValue,
     watch,
     formState: { errors },
-  } = useForm<BookUploadFormValues>({
+  } = useForm<DocumentUploadFormValues>({
     resolver: zodResolver(UploadSchema),
     defaultValues: {
       title: '',
@@ -49,7 +49,7 @@ const UploadForm = () => {
   const handlePdfChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      setValue('bookPdf', file, { shouldValidate: true });
+      setValue('documentPdf', file, { shouldValidate: true });
       setPdfPreview(file.name);
     }
   };
@@ -63,7 +63,7 @@ const UploadForm = () => {
     }
   };
 
-  const onSubmit = async (data: BookUploadFormValues) => {
+  const onSubmit = async (data: DocumentUploadFormValues) => {
     setIsSubmitting(true);
     try {
       // TODO: implement submission logic
@@ -79,8 +79,8 @@ const UploadForm = () => {
         <div className="loading-wrapper">
           <div className="loading-shadow-wrapper bg-[var(--bg-card)]">
             <div className="loading-shadow">
-              <Loader2 className="loading-animation size-12 text-[#663820]" />
-              <p className="loading-title">Synthesizing your book...</p>
+              <Loader2 className="loading-animation size-12 text-[#6B2318]" />
+              <p className="loading-title">Waking your document...</p>
               <p className="text-sm text-[var(--text-secondary)]">
                 This may take a few minutes
               </p>
@@ -91,10 +91,10 @@ const UploadForm = () => {
 
       <div className="new-book-wrapper">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-          {/* Book PDF File */}
+          {/* Document PDF File */}
           <div className="space-y-2">
             <Label className="text-base font-semibold text-[var(--text-primary)]">
-              Book PDF File
+              Document PDF File
             </Label>
             <div
               onClick={() => pdfInputRef.current?.click()}
@@ -109,20 +109,20 @@ const UploadForm = () => {
               />
               {pdfPreview ? (
                 <div className="flex flex-col items-center gap-2 py-4">
-                  <Upload className="size-10 text-[#663820]" />
+                  <Upload className="size-10 text-[#6B2318]" />
                   <p className="text-sm font-medium text-[var(--text-primary)]">{pdfPreview}</p>
                   <p className="text-xs text-[var(--text-secondary)]">Click to change file</p>
                 </div>
               ) : (
                 <div className="flex flex-col items-center gap-2 py-4">
-                  <Upload className="size-10 text-[#9c8b7a]" />
-                  <p className="text-sm text-[#9c8b7a]">Click to upload PDF</p>
-                  <p className="text-xs text-[#b5a89a]">PDF file (max 50MB)</p>
+                  <Upload className="size-10 text-[#9A8A78]" />
+                  <p className="text-sm text-[#9A8A78]">Click to upload PDF</p>
+                  <p className="text-xs text-[#B3A595]">PDF file (max 50MB)</p>
                 </div>
               )}
             </div>
-            {errors.bookPdf && (
-              <p className="text-sm text-red-600">{errors.bookPdf.message}</p>
+            {errors.documentPdf && (
+              <p className="text-sm text-red-600">{errors.documentPdf.message}</p>
             )}
           </div>
 
@@ -153,9 +153,9 @@ const UploadForm = () => {
                 </div>
               ) : (
                 <div className="flex flex-col items-center gap-2 py-4">
-                  <ImageIcon className="size-10 text-[#9c8b7a]" />
-                  <p className="text-sm text-[#9c8b7a]">Click to upload cover image</p>
-                  <p className="text-xs text-[#b5a89a]">Leave empty to auto-generate from PDF</p>
+                  <ImageIcon className="size-10 text-[#9A8A78]" />
+                  <p className="text-sm text-[#9A8A78]">Click to upload cover image</p>
+                  <p className="text-xs text-[#B3A595]">Leave empty to auto-generate from PDF</p>
                 </div>
               )}
             </div>
@@ -217,7 +217,7 @@ const UploadForm = () => {
                     key={voice.id}
                     className={`flex cursor-pointer items-start gap-2.5 rounded-xl border p-4 transition-colors ${
                       selectedVoice === voice.id
-                        ? 'border-[#663820] bg-[#663820]/5'
+                        ? 'border-[#6B2318] bg-[#6B2318]/5'
                         : 'border-[var(--border-subtle)] bg-white hover:border-[var(--border-medium)]'
                     }`}
                   >
@@ -225,7 +225,7 @@ const UploadForm = () => {
                       type="radio"
                       value={voice.id}
                       {...register('voice')}
-                      className="mt-1 accent-[#663820]"
+                      className="mt-1 accent-[#6B2318]"
                     />
                     <div>
                       <p className="font-medium text-[var(--text-primary)]">{voice.name}</p>
@@ -245,7 +245,7 @@ const UploadForm = () => {
                     key={voice.id}
                     className={`flex cursor-pointer items-start gap-2.5 rounded-xl border p-4 transition-colors ${
                       selectedVoice === voice.id
-                        ? 'border-[#663820] bg-[#663820]/5'
+                        ? 'border-[#6B2318] bg-[#6B2318]/5'
                         : 'border-[var(--border-subtle)] bg-white hover:border-[var(--border-medium)]'
                     }`}
                   >
@@ -253,7 +253,7 @@ const UploadForm = () => {
                       type="radio"
                       value={voice.id}
                       {...register('voice')}
-                      className="mt-1 accent-[#663820]"
+                      className="mt-1 accent-[#6B2318]"
                     />
                     <div>
                       <p className="font-medium text-[var(--text-primary)]">{voice.name}</p>

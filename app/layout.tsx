@@ -19,8 +19,8 @@ const monaSans = Mona_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Bookified",
-  description: "Transform your books into interactive AI conversations. Upload your PDFs and chat with them via voice.",
+  title: "Wake",
+  description: "Your documents, awake. Upload any PDF and start a voice conversation — ask questions, explore ideas, and learn just by talking.",
 };
 
 export default function RootLayout({
@@ -37,12 +37,12 @@ export default function RootLayout({
               socialButtonsVariant: "iconButton",
             },
             variables: {
-              colorPrimary: "#663820",
-              colorBackground: "#f8f4e9",
-              colorText: "#212a3b",
-              colorTextSecondary: "#3d485e",
+              colorPrimary: "#6B2318",
+              colorBackground: "#F0E6CE",
+              colorText: "#1C2B3A",
+              colorTextSecondary: "#3A4A5C",
               colorInputBackground: "#ffffff",
-              colorInputText: "#212a3b",
+              colorInputText: "#1C2B3A",
               borderRadius: "0.625rem",
               fontFamily: "'Mona Sans', sans-serif",
             },
@@ -52,7 +52,7 @@ export default function RootLayout({
               headerTitle: "font-serif",
               headerSubtitle: "text-[var(--text-secondary)]",
               formButtonPrimary:
-                "bg-[#663820] hover:bg-[#7a4528] transition-colors",
+                "bg-[#6B2318] hover:bg-[#7D2E1F] transition-colors",
             },
           }}
         >

@@ -51,28 +51,30 @@
   --radius: 0.625rem;
 
   /* Warm Literary Backgrounds */
-  --bg-primary: #f8f4e9;
-  --bg-secondary: #f3e4c7;
-  --bg-tertiary: #fff6e5;
+  --bg-primary: #F0E6CE;
+  --bg-secondary: #EBDABC;
+  --bg-tertiary: #FFF0D4;
   --bg-card: #ffffff;
 
   /* Warm Text Colors */
-  --text-primary: #212a3b;
-  --text-secondary: #3d485e;
-  --text-muted: #222c37;
+  --text-primary: #1C2B3A;
+  --text-secondary: #3A4A5C;
+  --text-muted: #1C2B3A;
 
   /* Warm Accent */
-  --accent-warm: #212a3b;
-  --accent-warm-hover: #3d485e;
-  --accent-light: #fff6e5;
+  --accent-warm: #1C2B3A;
+  --accent-warm-hover: #3A4A5C;
+  --accent-light: #FFF0D4;
+  --accent-amber: #D4952B;
+  --accent-amber-light: #F5D9A0;
 
   /* Semantic Colors */
   --success: #7c9a82;
   --warning: #d4a853;
 
   /* Borders */
-  --border-subtle: rgba(33, 42, 59, 0.12);
-  --border-medium: rgba(33, 42, 59, 0.2);
+  --border-subtle: rgba(28, 43, 58, 0.12);
+  --border-medium: rgba(28, 43, 58, 0.2);
 
   /* Soft Shadows */
   --shadow-soft-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -82,44 +84,45 @@
   --shadow-book: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
 
   /* Base theme colors */
-  --background: #f8f4e9;
-  --foreground: #212a3b;
+  --background: #F0E6CE;
+  --foreground: #1C2B3A;
   --card: #ffffff;
-  --card-foreground: #212a3b;
+  --card-foreground: #1C2B3A;
   --popover: #ffffff;
-  --popover-foreground: #212a3b;
-  --primary: #212a3b;
+  --popover-foreground: #1C2B3A;
+  --primary: #1C2B3A;
   --primary-foreground: #ffffff;
-  --secondary: #f3e4c7;
-  --secondary-foreground: #212a3b;
-  --muted: #f3e4c7;
-  --muted-foreground: #3d485e;
-  --accent: #fff6e5;
-  --accent-foreground: #212a3b;
+  --secondary: #EBDABC;
+  --secondary-foreground: #1C2B3A;
+  --muted: #EBDABC;
+  --muted-foreground: #3A4A5C;
+  --accent: #FFF0D4;
+  --accent-foreground: #1C2B3A;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: rgba(33, 42, 59, 0.12);
-  --input: rgba(33, 42, 59, 0.12);
-  --ring: #212a3b;
+  --border: rgba(28, 43, 58, 0.12);
+  --input: rgba(28, 43, 58, 0.12);
+  --ring: #1C2B3A;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --sidebar: #ffffff;
-  --sidebar-foreground: #212a3b;
-  --sidebar-primary: #212a3b;
+  --sidebar-foreground: #1C2B3A;
+  --sidebar-primary: #1C2B3A;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f3e4c7;
-  --sidebar-accent-foreground: #212a3b;
-  --sidebar-border: rgba(33, 42, 59, 0.12);
-  --sidebar-ring: #212a3b;
+  --sidebar-accent: #EBDABC;
+  --sidebar-accent-foreground: #1C2B3A;
+  --sidebar-border: rgba(28, 43, 58, 0.12);
+  --sidebar-ring: #1C2B3A;
 
   /* Brand color */
-  --blue: #212a3b;
+  --blue: #1C2B3A;
 
-  /* Brand accent (warm brown) - for active states and CTAs */
-  --color-brand: #663820;
-  --color-brand-hover: #7a4528;
+  /* Brand accent (warm red-brown) - for active states and CTAs */
+  --color-brand: #6B2318;
+  --color-brand-hover: #7D2E1F;
+  --color-amber: #D4952B;
 
   /* Layout dimensions */
   --navbar-height: 74px;
@@ -212,7 +215,7 @@
     @apply relative z-20 flex flex-col justify-center items-center p-7;
   }
   .form-btn {
-    @apply !w-full h-14 rounded-[10px] bg-[#663820] cursor-pointer hover:bg-[#7a4528] text-xl text-white font-bold transition-colors;
+    @apply !w-full h-14 rounded-[10px] bg-[#6B2318] cursor-pointer hover:bg-[#7D2E1F] text-xl text-white font-bold transition-colors;
     font-family: 'IBM Plex Serif', serif;
   }
   .loading-wrapper {
@@ -384,10 +387,10 @@
      VAPI CONTROLS COMPONENT
      =========================================== */
   .vapi-header-card {
-    @apply flex items-center gap-6 bg-[#f3e4c7] rounded-[14px] p-6 relative overflow-hidden;
+    @apply flex items-center gap-6 bg-[#EBDABC] rounded-[14px] p-6 relative overflow-hidden;
   }
   .vapi-compact-header {
-    @apply flex items-center gap-2 bg-[#f3e4c7] rounded-[14px] p-3 mb-3;
+    @apply flex items-center gap-2 bg-[#EBDABC] rounded-[14px] p-3 mb-3;
   }
   .vapi-transcript-wrapper {
     @apply min-h-[400px] max-h-[60vh] flex flex-col;
@@ -425,7 +428,7 @@
     }
   }
   .vapi-mic-btn-active {
-    @apply bg-[#212a3b];
+    @apply bg-[#1C2B3A];
   }
   .vapi-mic-btn-inactive {
     @apply bg-white;
@@ -434,7 +437,7 @@
     @apply inline-block bg-white px-3 py-2 rounded-[4px];
   }
   .vapi-badge-ai-text {
-    @apply text-sm font-medium text-[#212a3b];
+    @apply text-sm font-medium text-[#1C2B3A];
     font-family: 'IBM Plex Serif', serif;
   }
   .vapi-status-indicator {
@@ -462,7 +465,7 @@
     @apply bg-green-500 animate-pulse;
   }
   .vapi-status-text {
-    @apply text-sm font-medium text-[#212a3b];
+    @apply text-sm font-medium text-[#1C2B3A];
     font-family: 'IBM Plex Serif', serif;
   }
   .vapi-stat-box {
@@ -472,7 +475,7 @@
     @apply bg-white rounded-[10px] px-2.5 py-5 min-w-[225px] text-center;
   }
   .vapi-stat-label {
-    @apply text-lg font-medium text-[#212a3b] mb-3;
+    @apply text-lg font-medium text-[#1C2B3A] mb-3;
     font-family: 'IBM Plex Serif', serif;
   }
   .vapi-stat-value-lg {
@@ -487,7 +490,7 @@
      BOOKS LIBRARY COMPONENT
      =========================================== */
   .library-hero-card {
-    @apply bg-[#f3e4c7] rounded-[14px] p-5 md:p-6 lg:py-6 lg:px-10 relative overflow-hidden flex items-center;
+    @apply bg-[#EBDABC] rounded-[14px] p-5 md:p-6 lg:py-6 lg:px-10 relative overflow-hidden flex items-center;
   }
   .library-hero-content {
     @apply flex flex-col items-center text-center lg:items-center lg:text-left lg:flex-row lg:justify-between gap-4 lg:gap-6 w-full;
@@ -499,7 +502,7 @@
     @apply text-[26px] md:text-3xl lg:text-4xl font-semibold text-black tracking-[-0.02em] leading-[32px] md:leading-[42px] font-serif;
   }
   .library-hero-description {
-    @apply text-sm md:text-base text-[#3d485e] leading-5 md:leading-6;
+    @apply text-sm md:text-base text-[#3A4A5C] leading-5 md:leading-6;
   }
   .library-hero-illustration {
     @apply flex items-center justify-center mt-2 lg:hidden;
@@ -537,13 +540,13 @@
     list-style: none;
   }
   .library-step-number {
-    @apply w-8 h-8 min-w-8 min-h-8 rounded-full bg-[#fff6e5] border border-[var(--text-primary)] text-[var(--text-primary)] flex items-center justify-center font-semibold text-sm;
+    @apply w-8 h-8 min-w-8 min-h-8 rounded-full bg-[#FFF0D4] border border-[var(--text-primary)] text-[var(--text-primary)] flex items-center justify-center font-semibold text-sm;
   }
   .library-step-title {
-    @apply font-semibold text-base text-[#222c37] leading-6;
+    @apply font-semibold text-base text-[#1C2B3A] leading-6;
   }
   .library-step-description {
-    @apply font-normal text-sm text-[#222c37] leading-5;
+    @apply font-normal text-sm text-[#1C2B3A] leading-5;
   }
   .library-search-wrapper {
     @apply flex items-center bg-white border border-[var(--border-subtle)] rounded-lg overflow-hidden w-full sm:w-80;
@@ -595,10 +598,10 @@
     @apply max-w-[80%] px-6 py-4 text-base font-medium leading-7 rounded-2xl;
   }
   .transcript-bubble-user {
-    @apply bg-[#663820] text-white rounded-br-sm;
+    @apply bg-[#6B2318] text-white rounded-br-sm;
   }
   .transcript-bubble-assistant {
-    @apply bg-[#f3e4c7] text-[#212a3b] rounded-bl-sm;
+    @apply bg-[#EBDABC] text-[#1C2B3A] rounded-bl-sm;
   }
   .transcript-cursor {
     @apply inline-block w-0.5 h-5 ml-1 bg-black animate-pulse;
@@ -696,11 +699,11 @@
     @apply mt-4 md:mt-5 flex-1 flex flex-col gap-1;
   }
   .book-card-title {
-    @apply font-bold text-[#212a3b] line-clamp-1 text-base md:text-xl leading-[22px] md:leading-[30px];
+    @apply font-bold text-[#1C2B3A] line-clamp-1 text-base md:text-xl leading-[22px] md:leading-[30px];
     font-family: 'IBM Plex Serif', serif;
   }
   .book-card-author {
-    @apply text-sm md:text-base font-medium text-[#3d485e] line-clamp-1;
+    @apply text-sm md:text-base font-medium text-[#3A4A5C] line-clamp-1;
   }
 
   /* ===========================================
@@ -714,10 +717,10 @@
     }
   }
   .upload-dropzone-uploaded {
-    @apply bg-[#f3e4c7];
+    @apply bg-[#EBDABC];
 
     .upload-dropzone-text {
-      @apply text-[#663820];
+      @apply text-[#6B2318];
     }
     .upload-dropzone-hint {
       @apply text-[#8B7355];
@@ -765,12 +768,12 @@
   border: none !important;
   box-shadow: var(--shadow-soft) !important;
   border-radius: 0.75rem !important;
-  background-color: #212a3b !important;
+  background-color: #1C2B3A !important;
   color: white !important;
 }
 
 .cl-formButtonPrimary:hover {
-  background-color: #3d485e !important;
+  background-color: #3A4A5C !important;
   box-shadow: var(--shadow-soft-md) !important;
 }
 
@@ -805,8 +808,8 @@
 }
 
 .cl-formFieldInput:focus {
-  border-color: #212a3b !important;
-  box-shadow: var(--shadow-soft), 0 0 0 2px rgba(33, 42, 59, 0.1) !important;
+  border-color: #1C2B3A !important;
+  box-shadow: var(--shadow-soft), 0 0 0 2px rgba(28, 43, 58, 0.1) !important;
 }
 
 /* Clerk Auth Social Buttons with Soft Shadow */
@@ -904,7 +907,7 @@ button[data-variant='unstyled'] *,
 .cl-tabButton *,
 [role='tablist'] button,
 [role='tablist'] button * {
-  color: #212a3b !important;
+  color: #1C2B3A !important;
 }
 
 /* Card sections have white background */
@@ -918,7 +921,7 @@ button[data-variant='unstyled'] *,
   height: 3rem !important;
   min-height: 3rem !important;
   font-size: 1.125rem !important;
-  background-color: #212a3b !important;
+  background-color: #1C2B3A !important;
   color: white !important;
   font-weight: 500 !important;
   border: none !important;
@@ -929,7 +932,7 @@ button[data-variant='unstyled'] *,
 }
 
 .clerk-pricing-table-wrapper button:hover {
-  background-color: #3d485e !important;
+  background-color: #3A4A5C !important;
   box-shadow: var(--shadow-soft-md) !important;
   transform: translateY(-1px);
 }
@@ -938,8 +941,8 @@ button[data-variant='unstyled'] *,
 .clerk-pricing-table-wrapper button:disabled,
 .clerk-pricing-table-wrapper button[disabled],
 .clerk-pricing-table-wrapper button[aria-disabled='true'] {
-  background-color: #f3e4c7 !important;
-  color: #212a3b !important;
+  background-color: #EBDABC !important;
+  color: #1C2B3A !important;
   cursor: default !important;
   box-shadow: none !important;
   opacity: 1 !important;
@@ -951,14 +954,14 @@ button[data-variant='unstyled'] *,
    Note: This uses :first-child which assumes active plan is always first.
    If Clerk changes the order, this may highlight the wrong card. */
 .cl-pricingTableCard:first-child {
-  border: 2px solid #663820 !important;
+  border: 2px solid #6B2318 !important;
 }
 
 /* Style the Active badge with better contrast */
 .cl-badge,
 .cl-pricingTableCard [class*='badge'],
 .cl-pricingTableCard span[class*='Badge'] {
-  background-color: #663820 !important;
+  background-color: #6B2318 !important;
   color: white !important;
   font-weight: 600 !important;
   padding: 0.25rem 0.75rem !important;
@@ -974,8 +977,8 @@ button[data-variant='unstyled'] *,
   text-align: center;
   padding: 0.75rem 1.5rem;
   margin-top: 1rem;
-  background-color: #f3e4c7 !important;
-  color: #212a3b !important;
+  background-color: #EBDABC !important;
+  color: #1C2B3A !important;
   font-weight: 600;
   border-radius: 0.75rem;
   font-size: 1.125rem;

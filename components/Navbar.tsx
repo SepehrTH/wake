@@ -7,7 +7,7 @@ import {cn} from "@/lib/utils"
 
 const navItems = [
   { label: "Library", href: "/library"},
-  { label: "Add New", href: "/books/new"},
+  { label: "Add New", href: "/documents/new"},
 ]
 
 const Navbar = () => {
@@ -17,8 +17,8 @@ const Navbar = () => {
     <header className="w-full fixed z-15 bg-('--bg-primary')">
         <div className="wrapper navbar-height py-4 flex justify-between items-center">
             <Link href="/" className="flex gap-0.5 items-center">
-              <Image src="/assets/logo.png" alt="bookified" width={42} height={26} />
-              <span className="logo-text">Bookified</span>
+              {/* <Image src="/assets/logo.png" alt="wake" width={42} height={26} /> */}
+              <span className="logo-text">Wake</span>
             </Link>
             <nav className="w-fit flex gap-7.5 items-center">
             {navItems.map(({ label, href }) => {

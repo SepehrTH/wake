@@ -7,7 +7,7 @@ import {
 } from '@/lib/constants';
 
 export const UploadSchema = z.object({
-  bookPdf: z
+  documentPdf: z
     .instanceof(File, { message: 'Please upload a PDF file' })
     .refine((file) => file.size <= MAX_FILE_SIZE, 'File size must be less than 50MB')
     .refine(
